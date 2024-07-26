@@ -1,0 +1,23 @@
+{
+    "testcases_run": 1368,
+    "number_of_cases_for_each_category": 456,
+    "general_critique_passes": 44,
+    "assisted_critique_passes": 47,
+    "explicit_critique_passes": 88,
+    "ordering": {
+        "number_of_cases": 342.0,
+        "ordering_pollutions_corrections": 60
+    },
+    "missing_step": {
+        "number_of_cases": 342.0,
+        "missing_step_pollutions_corrections": 59
+    },
+    "added_step": {
+        "number_of_cases": 342.0,
+        "added_step_pollutions_corrections": 30
+    },
+    "many_added_steps": {
+        "number_of_cases": 342.0,
+        "many_added_steps_pollutions_corrections": 30
+    }
+}

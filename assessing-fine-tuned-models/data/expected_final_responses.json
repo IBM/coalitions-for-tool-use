@@ -1,0 +1,171 @@
+[
+    {   
+        "Name": "Nager.Date",
+        "Expected_Final_Responses": [
+            "Today is not a public holiday.",
+            "China is an Asian country with the common name 'China', official name 'People's Republic of China', country code 'CN', and borders with Afghanistan.",
+            "The available countries for getting public holiday information include",
+            "Nager.Date version is 1.48.0",
+            "There are 8 long weekends in the US in 2024.",
+            "The next public holidays in Great Britain are",
+            "The public holdays in Australia include",
+            "The public holdiays in the next 7 days worldwide include",
+            "There are 11 long weekends in Japan in 2023.",
+            "The public holdiays in the next 7 days worldwide include",
+            "France is an European country with common name 'France', official name 'French Republic' and borders with Andorra, Belgium and Germany.",
+            "In the next year some of the public holidays in Germany include",
+            "In 2023, USA has the following public holidays New Year's Day, Martin Luther King, Jr. Day and more.",
+            "Italy is an European country with common name 'Italy', official name 'Italian Republic' and borders with Austria, France and San Marino.",
+            "The public holidays in Japan and Germany in the next year are",
+            "In 2023, Canada has this many public holidays whereas Mexico has",
+            "In 2023, Germany has the following long weekends"
+        ]
+    },
+    {   
+        "Name": "airportsapi",
+        "Expected_Final_Responses": [
+            "The URL for EDDF airport is https://www.frankfurt-airport.com/",
+            "The name of EDDM airport is Flaghafen Munchen and the last update date is",
+            "The ICAO code for Frankfurt airport is EDDF and the website URL is https://www.frankfurt-airport.com/",
+            "The name of EDDB airport is Flaghafen Berlin Brandenburg and the last update date is",
+            "The ICAO code for Munich airport is EDDM and the website URL is https://www.munich-airport.de/",
+            "The name of EDDH airport is Flaghafen Hamburg and the website URL is https://www.hamburg-airport.de/. The name of EDDF airport is Frankfurt airport is EDDF and the website URL is https://www.frankfurt-airport.com/",
+            "The airport is called Frankfurt Airport and the website URL is https://www.frankfurt-airport.com/",
+            "The airport is called Munich airport and the website URL is https://www.munich-airport.de/"
+        ]
+    },
+    {   
+        "Name": "AviationAPI",
+        "Expected_Final_Responses": [
+            "The Asheville Regional Airport is called Ashville RGNL it is based in North Carolina (NC) it has the FAA identifier AVL and the ICAO identifier KAVL",
+            "The aeronautical chart for Asheville Regional Airport",
+            "There are no updates or changes on the Arrivals chart for the Asheville Regional Airport",
+            "The airport layout for Asheville Regional Airport can be find here https://charts.aviationapi.com/AFD/AIRAC_220714/pdf",
+            "The preferred routes are",
+            "The preferred routes are",
+            "The VATSIM arrivals and departures are",
+            "The controllers at Shez Ansari (CHI) are",
+            "The METAR weather report for Asheville Regional Airport (ICAO: KAVL)",
+            "The TAF weather report for Asheville Regional Airport (ICAO: KAVL)",
+            "The weather conditions at O'Hare International Airport (ICAO: ORD)",
+            "The elevation and fuel available at Los Angeles International Airport (ICAO: KLAX)",
+            "The airport information for John F. Kennedy International Airport (ICAO: KJFK)"
+        ]
+    },
+    {   
+        "Name": "chucknorris.io",
+        "Expected_Final_Responses": [
+            "Here is a random Chuck Norris joke",
+            "Here is a Chuck Norris joke about music",
+            "Here is a Chuck Norris joke about movies",
+            "Here is a Chuck Norris joke about Texas",
+            "Here is a Chuck Norris joke about sports",
+            "Here are three Chuck Norris jokes"
+        ]
+    },
+    {   
+        "Name": "Random Useless Facts",
+        "Expected_Final_Responses": [
+            "Here is a random fact",
+            "Here is a random fact",
+            "Here is a random fact",
+            "Here is todays useless fact",
+            "Here is todays useless fact",
+            "Here are five random facts"
+        ]
+    },
+    {   
+        "Name": "apilayer weatherstack",
+        "Expected_Final_Responses": [
+            "The weather in Paris",
+            "The weather in New York",
+            "The weather in San Francisco",
+            "The weather in London",
+            "The weather in Beijing",
+            "The weather in Denver",
+            "The weather in Toronto",
+            "The weather in Los Angeles",
+            "The weather in Chicago",
+            "The weather in Miami"
+        ]
+    },
+    {   
+        "Name": "Free Dictionary",
+        "Expected_Final_Responses": [
+            "The definition of quixotic",
+            "The definition of serendipity",
+            "The definition of beautiful",
+            "The definition of ephemeral",
+            "The definition of affect",
+            "The definition of serendipity",
+            "The definition of ephemeral"
+        ]
+    },
+    {   
+        "Name": "WolframAlpha",
+        "Expected_Final_Responses": [
+            "The current weather in New York is",
+            "The square root of 625 is",
+            "5 miles in kilometers is",
+            "The population of Tokyo",
+            "The capital of Australia is",
+            "The square root of 256 is",
+            "The moons of Jupiter include",
+            "The weather in Paris in July is",
+            "Albert Einstein was born in",
+            "A medium-sized apple calorie count is",
+            "The diameter of Mars is",
+            "The number of calories in an apple and a banana are",
+            "The distance from Los Angeles to New York is"
+        ]
+    },
+    {   
+        "Name": "Fruityvice",
+        "Expected_Final_Responses": [
+            "The nutritional values of a mango are",
+            "The list of available fruits is",
+            "Here is some information on a fruit from the Rosaceae family",
+            "The list of fruits that belong to the Citrus genus are",
+            "The list of fruits that belong to the Sapindales order are",
+            "The list of fruits that belong to the Rosales order are",
+            "The list of fruits that belong to the Citrus genus are",
+            "The list of fruits that belong to the Solanaceae family are",
+            "The nutritional values of an apple are",
+            "The list of in season fruits are",
+            "Apples, oranges and bananas originate from"
+        ]
+    },
+    {   
+        "Name": "Cataas",
+        "Expected_Final_Responses": [
+            "Here is a picture of a random cat",
+            "Here is a picture of a random cat with width 800 pixels and height of 600 pixels",
+            "Here is a picture of a random cat with Happy Birthday text",
+            "The list of available cat tags are",
+            "The count of cats in the database are",
+            "Here are 3 random cats",
+            "Here is a picture of a random cat which is cute",
+            "Here is a picture of a random cat with width 500 pixels and height of 300 pixels with the cat being tabby",
+            "Here is a picture of a random cat with Happy Birthday text",
+            "Here is a picture of a random cat with text",
+            "Here is a picture of a random cat with text",
+            "Here is a picture of a random cat with Happy Birthday text"
+        ]
+    },
+    {   
+        "Name": "CurrencyBeacon",
+        "Expected_Final_Responses": [
+            "The current exchange rate for USD to EUR is",
+            "The historical exchange rate for GBP to CAD",
+            "The exchange rate data for USD to JPY from October 1, 2021, to November 30, 2021 is",
+            "500 USD in Euros is",
+            "The current exchange rates for USD, EUR and GBP are",
+            "The exchange rate data for THB to USD from January 1, 2023, to December 31, 2023 is",
+            "1000 US dollars in Japanese yen is",
+            "200 US dollars converted to Euros is",
+            "The current exchange rates for the US dollar against the Euro, British pound, and Japanese yen is",
+            "The current exchange rate from US dollars to Japanese yen is",
+            "The current exchange rate from US dollars to Euros is"
+        ]
+    }
+]

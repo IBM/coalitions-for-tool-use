@@ -1,0 +1,22 @@
+{
+    "testcases_run": 1368,
+    "general_critique_passes": 313,
+    "assisted_critique_passes": 260,
+    "explicit_critique_passes": 346,
+    "ordering": {
+        "number_of_cases": 342.0,
+        "ordering_pollutions_corrections": 301
+    },
+    "missing_step": {
+        "number_of_cases": 342.0,
+        "missing_step_pollutions_corrections": 214
+    },
+    "added_step": {
+        "number_of_cases": 342.0,
+        "added_step_pollutions_corrections": 193
+    },
+    "many_added_steps": {
+        "number_of_cases": 342.0,
+        "many_added_steps_pollutions_corrections": 211
+    }
+}
