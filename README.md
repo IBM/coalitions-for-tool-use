@@ -1,77 +1,66 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
-# repo-template
+# coalitions-for-tool-use
 
-<!-- Build Status, is a great thing to have at the top of your repository, it shows that you take your CI/CD as first class citizens -->
-<!-- [![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli) -->
+## Introduction
 
-<!-- Not always needed, but a scope helps the user understand in a short sentance like below, why this repo exists -->
-## Scope
+This repository stores the data, assessment scripts and simplified code used for assessing if coalitions of pretrained Large Language Models (LLMs) can work together and enhance the performance of tool using, LLM powered, agents. 
 
-The purpose of this project is to provide a template for new open source repositories.
+This research was performed by IBM Research UK and investigates if coalitions of open-sourced, pretrained (non-fine-tuned) Large Language Models, can work together to assist in complex workflows through agentic augmentation with external tools. 
 
-<!-- A more detailed Usage or detailed explaination of the repository here -->
-## Usage
+## Overview
 
-This repository contains some example best practices for open source repositories:
+The research focused on assessing if a coalition of models: 
+1. Offered comparable performance to single fine-tuned (for tool use) models.
+1. Outperformed single open-source, pretrained models in the domain of tool use.
+1. Offered any cost savings by relying on smaller models for specific tasks. 
 
-* [LICENSE](LICENSE)
-* [README.md](README.md)
-* [CONTRIBUTING.md](CONTRIBUTING.md)
-* [MAINTAINERS.md](MAINTAINERS.md)
-<!-- A Changelog allows you to track major changes and things that happen, https://github.com/github-changelog-generator/github-changelog-generator can help automate the process -->
-* [CHANGELOG.md](CHANGELOG.md)
+The hypothesis behind this research was asking if:
+"Different LLMs exhibit different traits, enabling them to be more accurate at specific tasks".
 
-> These are optional
+The motivation behind this research was to challenge the status quo of "bigger models are better" and also considering alternative means to fine-tuning for LLM applications. 
 
-<!-- The following are OPTIONAL, but strongly suggested to have in your repository. -->
-* [dco.yml](.github/dco.yml) - This enables DCO bot for you, please take a look https://github.com/probot/dco for more details.
-* [travis.yml](.travis.yml) - This is a example `.travis.yml`, please take a look https://docs.travis-ci.com/user/tutorial/ for more details.
+The assessment of this coalition was performed using the ToolAlpaca [test data set](https://github.com/tangqiaoyu/ToolAlpaca/blob/main/data/eval_real.json). This dataset exhibited the following qualities:
+- 114 test cases requiring 11 different services
+- Requiring an average of 1.25 steps (requiring different APIs/tool from the service), offering a non-trivial challenge in planning for tool use
+- Each service was well-documented and came with an OpenAPI documenting the different APIs and parameters in a standadised way. 
+- An accompanying dataset was used by the ToolAlpaca team to fine-tune the [Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/) models, giving way to a direct comparison of fine-tuned models for tool use versus the coalition of non-fine-tuned models approach.
 
-These may be copied into a new or existing project to make it easier for developers not on a project team to collaborate.
+This repo contains:
+1. Assessment of the coalition against the finetuned ToolAlpaca 7B and 13B models. See [assessing-fine-tuned-models](./assessing-fine-tuned-models/).
+1. Assessment of the coalition against single, un-fine-tuned models. See [assessing-single-models](./assessing-single-models/).
 
-<!-- A notes section is useful for anything that isn't covered in the Usage or Scope. Like what we have below. -->
-## Notes
+For each assessment, the collected datasets and evaluation scripts are provided. 
 
-**NOTE: While this boilerplate project uses the Apache 2.0 license, when
-establishing a new repo using this template, please use the
-license that was approved for your project.**
+A simplified version of the coalition system, broken up into different scripts is shared to demonstrate the inner workings of the coalition system and to demonstrate how the datasets were collected. See [simplified-coalition](./simplifed-coalition/).
 
-**NOTE: This repository has been configured with the [DCO bot](https://github.com/probot/dco).
-When you set up a new repository that uses the Apache license, you should
-use the DCO to manage contributions. The DCO bot will help enforce that.
-Please contact one of the IBM GH Org stewards.**
+## Reproducing the results
+To run the accompanying evaluation scripts and the example prompting scripts we require Python 3.10. Follow the steps below to setup the local environment and then proceed to the subdirectory READMEs to run the relevant scripts. 
 
-<!-- Questions can be useful but optional, this gives you a place to say, "This is how to contact this project maintainers or create PRs -->
-If you have any questions or issues you can create a new [issue here][issues].
+1. Setup a local virtual environment:
+    ```
+    python3.10 -m venv .venv
+    ```
+2. Start the venv
+    ```
+    source .venv/bin/activate
+    ```
+3. Install required dependencies
+    ```
+    pip install -r requirements.txt
+    ```
+4. Proceed to subdirectory READMEs to run the relevant scripts.
 
-Pull requests are very welcome! Make sure your patches are well tested.
-Ideally create a topic branch for every separate change you make. For
-example:
+For any queries or feedback please email: prattyush.mangal@ibm.com
 
-1. Fork the repo
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## Contributors
+
+This package is written and maintained by Prattyush Mangal at IBM Research as part of the AI-Enriched Simulation team. Please contact Prattyush Mangal (<prattyush.mangal@ibm.com>) or Edward Pyzer-Knapp (<EPyzerK3@uk.ibm.com>) for questions about how to use and/or contribute.
 
 ## License
 
-All source files must include a Copyright and License header. The SPDX license header is 
-preferred because it can be easily scanned.
+This repository is an open-source repository licensed under the MIT License. Check the details in the [`LICENSE`](./LICENSE) file.
 
-If you would like to see the detailed LICENSE click [here](LICENSE).
-
-```text
-#
-# Copyright IBM Corp. {Year project was created} - {Current Year}
-# SPDX-License-Identifier: Apache-2.0
-#
-```
 ## Authors
 
-Optionally, you may include a list of authors, though this is redundant with the built-in
-GitHub list of contributors.
+- Author: Prattyush Mangal <prattyush.mangal@ibm.com>
 
-- Author: New OpenSource IBMer <new-opensource-ibmer@ibm.com>
-
-[issues]: https://github.com/IBM/repo-template/issues/new
+[issues]: https://github.com/IBM/coalitions-for-tool-use/issues/new

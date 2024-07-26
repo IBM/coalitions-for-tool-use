@@ -1,0 +1,2986 @@
+{
+    "average_cosine_similarity_of_final_responses": 0.681377561078692,
+    "average_rougeL_precision": 0.6097570837315418,
+    "average_rougeL_recall": 0.23225641156168567,
+    "average_rougeL_fmeasure": 0.2997871448466922,
+    "average_additional_planner_steps": 0.8765432098765432,
+    "additional_planner_steps_taken": 71,
+    "error_in_parsing_count": 16,
+    "planner_failure_count": 17,
+    "slot_filling_failure_count": 45,
+    "planner_and_slot_filling_pass_count": 52,
+    "results": [
+        {
+            "service_name": "Nager.Date",
+            "tests": [
+                {
+                    "input_prompt": "Can you check if today is a public holiday in China?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayIsTodayPublicHoliday",
+                            "Action_Input": "{\"countryCode\": \"CN\"}"
+                        }
+                    ],
+                    "actual_output": "Today is not a public holiday in China.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayIsTodayPublicHoliday",
+                            "Action_Input": "{\"countryCode\": \"CN\", \"offset\": 0}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "Get the country info for China.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"CN\"}"
+                        }
+                    ],
+                    "actual_output": "The country code for China is CN, and its official name is the People's Republic of China. Its region is Asia, and its borders are Afghanistan, Bhutan, Myanmar, Hong Kong, India, Kazakhstan, North Korea, Kyrgyzstan, Laos, Macau, Mongolia, Pakistan, Russia, Tajikistan, and Vietnam.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"cn\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "Get the list of all available countries for public holiday information.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "CountryAvailableCountries",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The list of all available countries for public holiday information is as follows: Andorra, Albania, Argentina, Austria, Australia, \u00c5land Islands, Bosnia and Herzegovina, Barbados, Belgium, Bulgaria, Benin, Bolivia, Brazil, Botswana, Belarus, BZ, Belize, Canada, China, Colombia, Costa Rica, Cuba, Cyprus, Czechia, Denmark, Dominican Republic, Ecuador, Estonia, Egypt, Spain, Finland, Faroe Islands, France, Germany, Greece, Guatemala, Guyana, Honduras, Hungary, Indonesia, Ireland, Isle of Man, Italy, Japan, South Korea, Liechtenstein, Lesotho, Lithuania, Luxembourg, Latvia, Malta, Mexico, Mozambique, Namibia, Netherlands, New Zealand, Norway, Poland, Portugal, Romania, Russia, Slovakia, Slovenia, South Africa, Spain, Sweden, Switzerland, Thailand, Tunisia, Turkey, Ukraine, United Kingdom, United States, Vietnam, Yugoslavia, Zimbabwe, Zambia, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbabwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe, Zimbwe: Zimbwe\n\n\nThe Zimbant, Zimbwe, Zimbwe, Zimbwe,Zimbant,Zimb",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "CountryAvailableCountries",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I want to know the version of the Nager.Date library being used. Can you fetch that for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "VersionGetVersion",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The version of the Nager.Date library being used is 1.47.1.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "VersionGetVersion",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I need to find out if there are any long weekends in the United States in 2024. Can you help me with that?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2024, \"countryCode\": \"US\"}"
+                        }
+                    ],
+                    "actual_output": "There are 10 long weekends in the United States in 2024. The dates are as follows: \n\nDecember 30th, 2023 - January 1st, 2024\nJanuary 13th, 2024 - January 15th, 2024\nFebruary 17th, 2024 - February 19th, 2024\nMay 25th, 2024 - May 27th, 2024\nJuly 4th, 2024 - July 7th, 2024\nSeptember 1st, 2024 - September 2nd, 2024\nNovember 9th, 2024 - November 11th, 2024\nNovember 28th, 2024 - November 29th, 2024\nDecember 1st, 2024 - December 2nd, 2024",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2024, \"countryCode\": \"US\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Find out the next public holidays for the Great Britain.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"GB\"}"
+                        }
+                    ],
+                    "actual_output": "The next public holidays for the Great Britain are Saint Patrick's Day (March 17th, 2024), Good Friday (March 29th, 2024), Easter Monday (April 1st, 2024), Early May Bank Holiday (May 6th, 2024), Spring Bank Holiday (May 27th, 2024), Battle of the Boyne (July 12th, 2024), Summer Bank Holiday (August 5th, 2024), Christmas Day (December 25th, 2024), and Boxing Day (December 26th, 2024).",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"GB\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about the public holidays in Australia in 2023. Can you fetch the list for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"AU\"}"
+                        }
+                    ],
+                    "actual_output": "The public holidays in Australia in 2023 are New Year's Day, Australia Day, Labour Day, and many more.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"AU\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Get the upcoming public holidays worldwide for the next 7 days.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidaysWorldwide",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The upcoming public holidays worldwide for the next 7 days are: \n\nCarnaval (Carnival) in Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bangladesh, Barbados, Belgium, Bermuda, Bhutan, Bolivia, Bosnia-Herzegovina, Botswana, Brazil, British, Brunei, Bulgaria, Burundian, Cambodia, Canada, Cape Verdean, Caribbean, Chinese, Colombian, Comoros, Cook Islands, Costa Rica, Cote d'Ivo, Croatia, Cuba, Cyprus, Cypriot, Cyprus, Cyprist, country, country, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist, Cyprist: Cyprist, Cyprist, Cyprist, Cyist: Cyist, Cyist, Cyist, Cyist. Cyist, Cyist, Cyist, Cyist, Cyist.\nCyist.\nCyist.\nCyist, Cyist, Cyist, Cyist\nCyist\n\nCyist\nThe expert.\n\nCyist, Cyist, Cyist, Cyist information.\nTheist.\nThe",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidaysWorldwide",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Japan next year. Can you find out if there are any long weekends in Japan in 2023? It would be great to align my trip with a long weekend.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"JP\"}"
+                        }
+                    ],
+                    "actual_output": "There are 10 long weekends in Japan in 2023. The dates are as follows: \n\nDecember 31, 2022 - January 2, 2023\nJanuary 7, 2023 - January 9, 2023\nFebruary 23, 2023 - February 26, 2023\nMarch 18, 2023 - March 21, 2023\nMay 3, 2023 - May 7, 2023\nJuly 15, 2023 - July 17, 2023\nAugust 11, 2023 - August 13, 2023\nSeptember 16, 2023 - September 18, 2023\nOctober 7, 2023 - October 9, 2023\nNovember 3, 2023 - November 5, 2023\nNovember 23, 2023 - November 26, 2023",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"JP\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about the public holidays in different countries. Could you show me the public holidays for the next week worldwide?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidaysWorldwide",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The public holidays for the next 7 days worldwide are: \n\nCarnaval (Carnival) in Argentina, Armenia, Australia, Austria, Azerbaijan, Bahamas, Bangladesh, Barbados, Belgium, Bermuda, Bhutan, Bolivia, Bosnia-Herzegovina, Botswana, Brazil, British, Brunei, Bulgaria, Burundi, Cambodia, Canada, Cape Verde, Cayman Islands, Chile, China, Colombia, Comoros, Cook Islands, Costa Rica, Cayman Islands, Cuba, Cyprus, Czech, Denmark, Dominican, Finland, France, Germany, Greece, Hungary, Iceland, Iceland, Iceland, Ireland, Ireland, Iceland, Ireland, Iceland, Iceland, Iceland, Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland Iceland I",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidaysWorldwide",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm working on a project about different countries. Can you provide me with information about France, such as its official name, region, and neighboring countries?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"FR\"}"
+                        }
+                    ],
+                    "actual_output": "France is a country located in Europe. Its official name is French Republic and its region is Europe. Its neighboring countries are Andorra, Belgium, Germany, Italy, Luxembourg, Monaco, Spain, and Switzerland.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"FR\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm interested in knowing the upcoming public holidays in Germany for the next year. Could you fetch that information for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"DE\"}"
+                        }
+                    ],
+                    "actual_output": "The upcoming public holidays in Germany for the next year are: International Women's Day, Good Friday, Easter Sunday, Easter Monday, Labour Day, and Ascension Day.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"DE\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm creating a calendar for my international team. Can you help me find the public holidays in the USA for 2023?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"US\"}"
+                        }
+                    ],
+                    "actual_output": "The public holidays in the USA for 2023 are New Year's Day, Martin Luther King, Jr. Day, Presidents Day, Good Friday, Memorial Day, and Independence Day.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"US\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a road trip across Europe. Can you provide me with information about Italy, including its common name, official name, and the countries it shares borders with?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"IT\"}"
+                        }
+                    ],
+                    "actual_output": "Italy is a country located in Europe. It shares borders with Austria, France, San Marino, Slovenia, Switzerland, and Vatican City.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "CountryCountryInfo",
+                            "Action_Input": "{\"countryCode\": \"IT\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Can you help me plan my next vacation by checking the public holidays in Japan and Germany for the next year? I want to make sure I don't miss any important dates.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"JP\"}"
+                        },
+                        {
+                            "Action": "PublicHolidayNextPublicHolidays",
+                            "Action_Input": "{\"countryCode\": \"DE\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` - 1 - 1 1 1 -H 1 T-H T-H T-H-H-H-H-H-H-H-H-H: -H-H-H 1-H-H-H-H-H -H \tH \tH \tH of H of -H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H -H -H # H-H-H-H-H-H-H -H - -         -   - - - - - - - - - - - - - - -,,, - - - - - - -H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-C-C-C-C-H-H-P-P-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-H-P-P-H-H-P-P-H-H-H-H-H-H-H-H-P-P-P-P-P-P-P-P-V-P-V-V-P-P-P-P-P-P-P-P-P-P-V-C-V -P -P- - - - -V-P-V-V-V-V- - - - - - - - -P-P-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V- - - - - - - - - - - - - - - - - - -V-V-V-V-V-V         - - - - - -V-V-V- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - V- V- V- - -                                        - - - - - -                                                                             -           -            - -                                             for   - -                                                                                                           T  T        - - -           - - - -      - `"
+                },
+                {
+                    "input_prompt": "Hey, I'm curious about the holidays in different countries. Can you compare the number of public holidays in Canada, and Mexico for 2023?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"CA\"}"
+                        },
+                        {
+                            "Action": "PublicHolidayPublicHolidaysV3",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"MX\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ``"
+                },
+                {
+                    "input_prompt": "I'm planning a surprise visit to my friend in Germany. I need to know when the next long weekend of the year 2023 is coming up, so I can plan my trip.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"DE\"}"
+                        }
+                    ],
+                    "actual_output": "The next long weekend of the year 2023 in Germany is from April 7th to April 10th.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "LongWeekendLongWeekend",
+                            "Action_Input": "{\"year\": 2023, \"countryCode\": \"DE\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                }
+            ]
+        },
+        {
+            "service_name": "airportsapi",
+            "tests": [
+                {
+                    "input_prompt": "Can you find the website URL for the airport with the ICAO code \"EDDF\" in Germany?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "actual_output": "The website URL for the airport with the ICAO code \"EDDF\" in Germany is https://www.frankfurt-airport.com/.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Please retrieve the name and last update date for the airport with the ICAO code \"EDDM\" in Germany.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDM\"}"
+                        }
+                    ],
+                    "actual_output": "The airport with the ICAO code \"EDDM\" in Germany is called \"Flughafen M\\u00fcnchen\" and its last update date is \"2017-07-28T13:36:44.278790\". You can find more information about the airport at the following URL: https://www.munich-airport.de/.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDM\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Get the ICAO code and website URL for the airport named \"Frankfurt Airport\" in Germany.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "actual_output": "Unfortunately, the ICAO code and website URL for the airport named \"Frankfurt Airport\" in Germany is not available.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"FRA\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I need the last update date and name of the airport with the ICAO code \"EDDB\" in Germany.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDB\"}"
+                        }
+                    ],
+                    "actual_output": "The last update date for the airport with the ICAO code \"EDDB\" in Germany is 2020-11-18T13:40:36.266281. The name of the airport is \"Flughafen Berlin Brandenburg\".",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDB\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Could you fetch the website URL and ICAO code for the airport called \"Munich Airport\" in Germany?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDM\"}"
+                        }
+                    ],
+                    "actual_output": "The ICAO code for the airport called \"Munich Airport\" in Germany is not available.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"Munich Airport\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "Retrieve the name and website URL for the airport with the ICAO code \"EDDH\" and \"EDDF\" in Germany.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDH\"}"
+                        },
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "actual_output": "The airport with the ICAO code \"EDDH\" and \"EDDF\" in Germany is called \"Flughafen Hamburg\" and its website URL is https://www.hamburg-airport.de/.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDH\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Germany and I want to know more about the airport I'll be landing at. Can you find the name and website of the airport with the ICAO code 'EDDF'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "actual_output": "The airport with the ICAO code 'EDDF' is Flughafen Frankfurt Main, and its website is https://www.frankfurt-airport.com/.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDF\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm doing a research on German airports. Could you provide me the name and website of the airport that has the ICAO code 'EDDM'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDM\"}"
+                        }
+                    ],
+                    "actual_output": "The airport with the ICAO code 'EDDM' is Flughafen M\\u00fcnchen, located in Germany. The website for the airport is https://www.munich-airport.de/.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "AirportApi_getAirport",
+                            "Action_Input": "{\"icao_code\": \"EDDM\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                }
+            ]
+        },
+        {
+            "service_name": "AviationAPI",
+            "tests": [
+                {
+                    "input_prompt": "I'm planning a trip to Asheville, North Carolina and I'd like to know more about the Asheville Regional Airport. Can you find the details for me using its FAA identifier, AVL?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"AVL\"}"
+                        }
+                    ],
+                    "actual_output": "The Asheville Regional Airport (AVL) is located in Asheville, North Carolina. Its site number is 16517.5*A, and its type is AIRPORT. The facility name is ASHEVILLE RGNL. The FAA and ICAO identifiers are AVL and KAVL, respectively. The district office is MEM, and the state is NC. The state full is NORTH CAROLINA. The county is BUNCOMBE, and the city is ASHEVILLE. The ownership is PU, and the use is PU. The manager is LEW S. BLEIWEIS, A.A.E., and the manager phone is 828-654-3243. The latitude is 35-26-09.9980N, the latitude sec is 127569.9980N, the longitude is 082-32-31.3700W, the longitude sec is 297151.3700W, the elevation is 2164, the magnetic variation is 07W, the TPA is \"\", the VFR sectional is ATLANTA, the boundary artcc is ZTL, the boundary artcc name is ATLANTA, the responsible artcc is ZTL, the responsible artcc name is ATLANTA, the FSS phone number is \"\", the FSS phone numer tollfree is 1-800-WX-BRIEF, the notam facility identifier is AVL, the status is O, the certification typedate is I B S 05/1973, the customs airport of entry is N, the military joint use is N, the military landing is Y, the lighting schedule is SEE RMK, the beacon schedule is SS-SR, the control tower is Y, the unicom is 122.950, the ctaf is 121.100, and the effective date is 11/04/2021.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"AVL\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm preparing for a flight to Asheville Regional Airport (ICAO: AVL). Can you get me the aeronautical charts for this airport? I would like to see the general, departures, arrivals, and approaches charts specifically.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "charts_get",
+                            "Action_Input": "{\"apt\": \"AVL\", \"group\": 1}"
+                        }
+                    ],
+                    "actual_output": "I have retrieved the aeronautical charts for Asheville Regional Airport (ICAO: AVL). The charts include the general, departures, arrivals, and approaches charts. The charts can be found in the following PDFs: 05061ASHEVILLE.PDF, 05061IL17.PDF, 05061IL35.PDF.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "charts_get",
+                            "Action_Input": "{\"apt\": \"AVL\", \"group\": 7}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I've heard that there have been some changes to the charts for Asheville Regional Airport (ICAO: AVL). Can you check if there are any updates to the 'Arrivals' chart?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "charts_changes_get",
+                            "Action_Input": "{\"apt\": \"AVL\", \"chart_name\": \"Arrivals\"}"
+                        }
+                    ],
+                    "actual_output": "The 'Arrivals' chart for Asheville Regional Airport (ICAO: AVL) has been updated. The chart changes can be found in the response from the 'charts_changes_get' tool.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "charts_changes_get",
+                            "Action_Input": "{\"apt\": \"AVL\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm a bit nervous about my upcoming flight. Can you find the Airport Facility Directory (AFD) for Asheville Regional Airport (ICAO: AVL) to help me familiarize myself with the airport layout?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "charts_afd_get",
+                            "Action_Input": "{\"apt\": \"AVL\"}"
+                        }
+                    ],
+                    "actual_output": "The Airport Facility Directory (AFD) for Asheville Regional Airport (ICAO: AVL) is available. You can find it here: https://charts.aviationapi.com/AFD/AIRAC_220714/pdf.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "charts_afd_get",
+                            "Action_Input": "{\"apt\": \"AVL\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about the preferred routes for flights. Can you find all of the preferred routes for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "preferred-routes_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` ICAO assistant.\nASSISTANT Action: ICAO assistant.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT.`"
+                },
+                {
+                    "input_prompt": "I'm planning a flight from Nantucket Memorial Airport (ICAO: ACK) to Erie International Airport (ICAO: ERI). Can you find the preferred routes for this journey? I'll be flying at a low altitude.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "preferred-routes_search_get",
+                            "Action_Input": "{\"origin\": \"ACK\", \"dest\": \"ERI\", \"type\": \"L\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ``"
+                },
+                {
+                    "input_prompt": "I'm interested in the live air traffic at Hartsfield-Jackson Atlanta International Airport (ICAO: KATL). Can you find the arrivals and departures at this airport on VATSIM?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "vatsim_pilots_get",
+                            "Action_Input": "{\"apt\": \"KATL\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: `\nASSISTANT\nASSISTANT\nASSISTANT\nASSISTANT\nASSISTANT.\nASSISTANT\nASSISTANT tools-assISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT\nASSISTANT\nASSISTANT:\nASSISTANT:ASSISTANT\nASSISTANT:\nASSISTANT\nASSISTANT, `"
+                },
+                {
+                    "input_prompt": "I'd like to know who's controlling the airspace around Shez Ansari (fac: CHI) on VATSIM. Can you find the controllers at this facility for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "vatsim_controllers_get",
+                            "Action_Input": "{\"fac\": \"CHI\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` 1- ist ist ist 1  and  and 2-1-1 1 2-to-12 1 2 1 of  of  of  of 1-1- 1 1 1 1 1 1 1 1 ististist 1 1 1 1-1-1-1 1 `"
+                },
+                {
+                    "input_prompt": "I'm worried about the weather for my flight to Asheville. Can you get the METAR weather report for Asheville Regional Airport (ICAO: KAVL)?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "weather_metar_get",
+                            "Action_Input": "{\"apt\": \"KAVL\"}"
+                        }
+                    ],
+                    "actual_output": "The METAR weather report for Asheville Regional Airport (ICAO: KAVL) is as follows: 2021.\nASSISTANT Action: airports_get\nASSISTANT Action Input: {}\nASSISTANT Action: airports_get\nASSISTANT Action: airports_get\nASSISTANT Action:\nASSISTANT.\nASSISTANT.\nASSISTANT Action, airports_get information.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action:\nASSISTANT Action:\nASSISTANT Action:\nASSISTANT Action\nASSISTANT Action.\nASSISTANT Action: Action-assISTANT Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action: Action: Action: Action: Action:\nASSISTANT Action: Action: Action: Action, Action, Action, Action, Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT.\nASSISTANT Action.\nASSISTANT Action, Action.\nASSISTANT Action.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nassistant.\nASSISTANT.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nassist",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KAVL\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I need to plan for the weather during my entire stay in Asheville. Can you get the Terminal Aerodrome Forecast (TAF) for Asheville Regional Airport (ICAO: KAVL)?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "weather_taf_get",
+                            "Action_Input": "{\"apt\": \"KAVL\"}"
+                        }
+                    ],
+                    "actual_output": "The Terminal Aerodrome Forecast (TAF) for Asheville Regional Airport (ICAO: KAVL) is available in the response from the charts_get action. The TAF includes information on weather conditions for the next 24 hours, such as wind direction and speed, temperature, and precipitation.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "charts_get",
+                            "Action_Input": "{\"apt\": \"KAVL\", \"group\": \"7\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Chicago next week. Can you check the weather conditions at O'Hare International Airport (ICAO: ORD) for me? Also, I'd like to know the runway length and the type of surface of the longest runway there.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "weather_metar_get",
+                            "Action_Input": "{\"apt\": \"ORD\"}"
+                        },
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"ORD\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` 0 1 1 1, 10 1 1 10 1istist 1ist 1ist 1ist 1ist 1 1ist 1ist 1ist  of  of  of  of - - 1- 1- 1 ist ist 1 1  and  and 2-1-1 1-to-to-10 1 2  of  of  of  of 1- 1- 1 1 1 1 1 1 1 1ist ist ant ant 1 1-1-1-1 1 `"
+                },
+                {
+                    "input_prompt": "I'm studying for my pilot's license and need some help. Could you fetch me the aeronautical chart for Los Angeles International Airport (ICAO: KLAX)? Also, please provide me with the airport's elevation and the type of fuel available there.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "charts_get",
+                            "Action_Input": "{\"apt\": \"KLAX\"}"
+                        },
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KLAX\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: `\nASSISTANT\nASSISTANT\nASSISTANT\nASSISTANT\nASSISTANT:ASSISTANT name-specific name.\nASSISTANT.\nASSISTANT.\nASSISTANT\nASSISTANT:ASSISTANT.\nASSISTANT:ASSISTANT:ASSISTANT\nASSISTANT:ASSISTANT information, information, information.\nASSISTANT information.\nASSISTANT information.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nassistant.\nASSISTANT information.\nASSISTANT information.\nASSISTANT information.\nASSISTANT.\nassist.\nASSISTANT.\nassistant.\n\nassistant.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`"
+                },
+                {
+                    "input_prompt": "I'm a travel blogger and I'm writing about the airports in New York. Can you provide me with the airport information for John F. Kennedy International Airport (ICAO: KJFK) and LaGuardia Airport (ICAO: KLGA)?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KJFK\"}"
+                        },
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KLGA\"}"
+                        }
+                    ],
+                    "actual_output": "John F. Kennedy International Airport (ICAO: KJFK) and LaGuardia Airport (ICAO: KLGA) are both located in New York. John F. Kennedy International Airport (JFK) is owned by the Port Authority of New York and New Jersey and is located in Queens, New York. LaGuardia Airport (LGA) is owned by the City of New York and is located in Queens, New York.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KJFK, KLGA\"}"
+                        },
+                        {
+                            "Action": "airports_get",
+                            "Action_Input": "{\"apt\": \"KLGA\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "chucknorris.io",
+            "tests": [
+                {
+                    "input_prompt": "I'm having a party tonight and want to entertain my guests with some Chuck Norris jokes. Can you find a random joke for me to tell them?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Here's a Chuck Norris joke to tell your guests: \"At various times during the making of Star Wars movies, Chuck Norris was considered for the parts of Han Solo, Luke Skywalker, Darth Vader, the Emperor, Chewbacca, Lando and Yoda. In each case he would be wearing his regular clothes and speak in his Texan drawl.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm writing a blog post about Chuck Norris and his impact on pop culture. I need a joke related to 'music'. Can you find one for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_category_get",
+                            "Action_Input": "{\"category\": \"music\"}"
+                        }
+                    ],
+                    "actual_output": "I have found two jokes related to music that I can use in the blog post. The first is: \"Chuck Norris recently created a new genre of music, by fusing country music with East Coast gansta rap and Swedish death metal while incorporating elements of Tibetian throat-singing. He calls it Norrisound.\" The second is: \"Someone ask Chuck Norris waht kind of music he listened to. You fool he answered I don't listen to music music listens to me. He then proceeded with a roundhouse kick to the face while the National Anthem listned in the background.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"music\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm doing a presentation on Chuck Norris for my film class. Can you help me find a joke from the 'movie' category to lighten the mood?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_category_get",
+                            "Action_Input": "{\"category\": \"movie\"}"
+                        }
+                    ],
+                    "actual_output": "Here's a joke from the'movie' category: \"In the X-Men movies, none of the X-Men super-powers are done with special effects.\nASSISTANT Action: I have a joke from the user-friendly, helpful, action.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT, helpful, action-friendly,",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_category_get",
+                            "Action_Input": "{\"category\": \"movie\"}"
+                        },
+                        {
+                            "Action": "jokes_categories_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"movie\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "planner",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a trivia night and need some Chuck Norris jokes to include. Can you search for jokes that mention 'Texas'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"Texas\"}"
+                        }
+                    ],
+                    "actual_output": "I found 104 jokes that mention 'Texas' for your trivia night. Here are a few of my favorites: \n1. \"Crime does not pay - unless you are an undertaker following Walker, Texas Ranger, on a routine patrol.\"\n2. \"# Chuck Norris's show is called Walker: Texas Ranger, because Chuck Norris doesn't run.\"\n3. \"Those aren't credits that roll after Walker Texas Ranger. It is actually a list of fatalities that occurred during the making of the episode.\"\n4. \"Someone once videotaped Chuck Norris getting pissed off. It was called Walker: Texas Chain Saw Masacre.\"\n5. \"When an episode of Walker Texas Ranger was aired in France, the French surrendered to Chuck Norris just to be on the safe side.\"\n6. \"The phrase 'break a leg' was originally coined by Chuck Norris's co-stars in Walker, Texas Ranger as a good luck charm, indicating that a broken leg might be the worst extent of their injuries. This never proved to be the case.\"\n7. \"The phrase 'break a leg' was originally coined by Chuck Norris's co-stars in Walker, Texas Ranger as a good luck charm, indicating that a broken leg might be the worst extent of their injuries. This never proved to be the case.\"\n8. \"The phrase 'break a leg' was originally coined by Chuck Norris's co-stars in Walker, Texas Ranger as a good luck charm, indicating that a broken leg.\nASSISTANT Action: AssistANT Action: AssistANT Action: Norris, Texas Ranger, Texas Ranger.\nNorris, Texas Ranger.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"Texas\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm working on a Chuck Norris-themed board game and need some jokes for the cards. Can you find jokes that involve 'sports'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"sports\"}"
+                        }
+                    ],
+                    "actual_output": "I have found 6 jokes that involve sports. Here are the first 3: \n1. Chuck Norris lettered in 14 sports in high school. He would have had won letters in 15 if ass-kicking had been an officially recognized sport.\n2. All professional sports teams pay Chuck Norris Not to play--saves money on body bags and funeral arrangements.\n3. A sports writer interviewed Chuck Norris and asked if he had any sports experience. Chuck said he had experience in the broad jump, that he had once jumped 3 broads the same night.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "jokes_search_get",
+                            "Action_Input": "{\"query\": \"sports\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm having a party tonight and I want to entertain my guests with some Chuck Norris jokes. Can you find me 3 random jokes?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "jokes_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "jokes_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "jokes_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ``"
+                }
+            ]
+        },
+        {
+            "service_name": "Random Useless Facts",
+            "tests": [
+                {
+                    "input_prompt": "I'm hosting a trivia night at my place this evening. Could you fetch me a random useless fact that I can use to stump my friends? I want something they'll never guess.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Here's a random useless fact you can use to stump your friends: In the last 3,500 years, there have been approximately 230 years of peace throughout the civilized world.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm feeling a bit bored. Can you cheer me up with a random, useless fact? I'm in the mood for something quirky and unexpected.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Did you know that in Disney's Fantasia, the Sorcerer's name is \"Yensid\" (Disney backwards?)",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm writing a blog post about interesting trivia. Can you provide me with a random fact that I can include? It should be something that most people wouldn't know.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Did you know that the verb \"cleave\" is the only English word with two synonyms which are antonyms of each other: adhere and separate? This fact comes from djtech.net and can be found at the following permalink: https://uselessfacts.jsph.pl/api/v2/facts/ec5921df7f0fcbb780b4ca37ed77944b.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm starting a new daily ritual of learning something new every day. Can you tell me today's useless fact?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_today_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The average North American will eat 35,000 cookies during their life span.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_today_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm writing a daily newsletter and I want to include a fun fact in each issue. Can you give me today's useless fact that I can share with my subscribers?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_today_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Did you know that the average North American will eat 35,000 cookies during their life span? This is a fun fact that is useless, but you can share it with your subscribers in your daily newsletter.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_today_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm preparing a presentation for my class about random trivia. Could you help me find some fun, useless facts to include? I need about five facts.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Here are two useless facts you can use in your presentation: \n1. The most popular boat name is \"Obsession\". \n2. The average North American will eat 35,000 cookies during their life span.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_facts_random_get",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "api_v2_facts_today_get",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "apilayer weatherstack",
+            "tests": [
+                {
+                    "input_prompt": "I'm planning a trip to Paris next week. Could you find out what the current weather is there? And please, make sure the temperature is in Fahrenheit, I'm more familiar with that.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\"}"
+                        }
+                    ],
+                    "actual_output": "The current_get tool.\nASSISTANT.\nASSISTANT.\nASSISTANT Action:",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Paris\", \"units\": \"f\", \"callback\": \"weather_response\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 10,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm curious about the weather in multiple cities for a project. Can you get me the current weather for New York, Tokyo, and Sydney? I'd prefer the data in metric units.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"New York\", \"units\": \"m\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Tokyo\", \"units\": \"m\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Sydney\", \"units\": \"m\"}"
+                        }
+                    ],
+                    "actual_output": "Unfortunately, the current_get tool requires a subscription plan to get the current weather for multiple cities. You can upgrade your Subscription Plan to get the current weather for New York, Tokyo, and Sydney.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"New York, Tokyo, Sydney\", \"units\": \"m\", \"callback\": \"callback\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm heading out for a run in San Francisco. Can you tell me what the current temperature is and how it feels outside? Also, I'd like to know the humidity and visibility.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco\"}"
+                        }
+                    ],
+                    "actual_output": "I need to knowledges.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT,",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"San Francisco, CA\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 10,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a picnic this weekend in London. Could you check the current weather for me? I'm particularly interested in the wind speed and direction.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\"}"
+                        }
+                    ],
+                    "actual_output": "The current_get\nASSISTANT Action: current_get\nASSISTANT Action: response:\nASSISTANT Action:\nASSISTANT Action:",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"London\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 10,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm writing a blog post about the weather in different parts of the world. Can you fetch the current weather for Beijing, Moscow, and Rio de Janeiro? Please include the local time in each city.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Beijing\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Moscow\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Rio de Janeiro\"}"
+                        }
+                    ],
+                    "actual_output": "Unfortunately, the current_get tool requires a subscription plan to access the current weather data. Please upgrade your Subscription Plan to access the current weather data for Beijing, Moscow, and Rio de Janeiro.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Beijing, Moscow, Rio de Janeiro\", \"units\": \"m\", \"callback\": \"current_get_callback\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Beijing, Moscow, Rio de Janeiro\", \"units\": \"s\", \"callback\": \"current_get_callback\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Beijing, Moscow, Rio de Janeiro\", \"units\": \"f\", \"callback\": \"current_get_callback\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm a science teacher preparing a lesson on weather patterns. Can you get me the current weather for Denver? I need the data in scientific units.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Denver\", \"units\": \"s\"}"
+                        }
+                    ],
+                    "actual_output": "Unfortunately, you need to have a subscription plan to get the current weather for Denver. You can purchase a subscription plan on the API's website.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Denver\", \"units\": \"s\", \"callback\": \"weather_response\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "It's getting colder here. Can you find the current temperature in Fahrenheit for Toronto? I want to see if I need to bring a jacket.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Toronto\", \"units\": \"f\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` I need to upgrade your account.\nASSISTANT Action: `"
+                },
+                {
+                    "input_prompt": "I'm organizing an outdoor event next weekend. Is it possible to get the UV index and visibility in Los Angeles during that time?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\"}"
+                        }
+                    ],
+                    "actual_output": "The current_get\nASSISTANT Action:\nASSISTANT.\nASSISTANT.\nASSISTANT Action:",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "forecast_tool",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "forecast_tool",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "forecast_tool",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "forecast_tool",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "forecast_tool",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Los Angeles\", \"units\": \"m\", \"callback\": \"UV_index_visibility\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 10,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a road trip from New York to Los Angeles next week. Can you help me check the weather conditions for the major cities along the route, like Chicago, Denver, and Las Vegas? I'd like to know if there will be any severe weather conditions that might affect my trip.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Chicago\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Denver\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Las vegas\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` `"
+                },
+                {
+                    "input_prompt": "I'm planning a beach day in Miami this weekend. Could you check the weather for me? I'd like to know if it's going to be sunny and what the UV index will be. Also, could you tell me what the sea temperature will be?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami\"}"
+                        }
+                    ],
+                    "actual_output": "The current weather data for Miami, FL, with the current weather data for Miami, FL, with the current weather data for Miami, FL, with the current weather data for Miami, FL, with the current weather data for Miami, FL, with the current weather data for Miami, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL.\n\n\nFast FL, FL, FL, FL, FL, FL, FL, FL, FL.\nThe FL, FL, FL, FL, FL, FL, FL.\nThe FL.\nThe FL, FL, FL, FL, FL, FL and FL and FL.\nThe FL FL FL FL-specific tools.\nThe FL and FL.\nThe FL.\nThe FL FL.\nThe FL",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "current_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        },
+                        {
+                            "Action": "forecast_get",
+                            "Action_Input": "{ \"query\": \"Miami, FL\", \"units\": \"m\", \"callback\": \"weather_response\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "Free Dictionary",
+            "tests": [
+                {
+                    "input_prompt": "I'm preparing for a spelling bee and need to practice my pronunciation. Could you find the phonetics and audio pronunciation for the word 'quixotic' for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"quixotic\"}"
+                        }
+                    ],
+                    "actual_output": "The phonetics and audio pronunciation for the word 'quixotic' can be found here: https://api.dictionaryapi.dev/media/pronunciations/en/quixotic-us.mp3.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"quixotic\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm writing a report on the etymology of words. Can you find the origin of the word 'serendipity'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"serendipity\"}"
+                        }
+                    ],
+                    "actual_output": "The word'serendipity' is a noun that means \"A combination of events which have come together by chance to make a surprisingly good or wonderful outcome.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"serendipity\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm trying to expand my vocabulary. Can you find synonyms for the word 'beautiful'?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"beautiful\"}"
+                        }
+                    ],
+                    "actual_output": "The word 'beautiful' means \"Someone who is beautiful. Can be used as a term of address.\" and \"Attractive and possessing beauty.\" Synonyms for the word 'beautiful' include \"handsome, lovely, nice, pretty, shapely, and more.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"beautiful\"}"
+                        },
+                        {
+                            "Action": "synonyms",
+                            "Action_Input": "{\"word\": \"beautiful\"}"
+                        },
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"beautiful\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 2,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm a bit confused about the usage of the word 'ephemeral'. Could you provide me with its definition and an example sentence?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"ephemeral\"}"
+                        }
+                    ],
+                    "actual_output": "The word 'ephemeral' is a noun that means \"Something which lasts for a short period of time.\" An example sentence could be \"The ephemeral beauty of the flowers.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"ephemeral\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm trying to understand the difference between 'affect' and 'effect'. Could you fetch the definitions and examples of both words?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"affect\"}"
+                        },
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"effect\"}"
+                        }
+                    ],
+                    "actual_output": "Affect is a verb that means to influence or alter something. For example, \"The experience affected me deeply.\" Effect is a noun that means the result of an action. For example, \"The effect of the experience was to change me.\"",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"affect\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm working on my English vocabulary. Can you help me understand the word \"serendipity\"? I need its definition, pronunciation, part of speech, and some examples of its usage. Also, provide me with some synonyms to expand my vocabulary.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"serendipity\"}"
+                        }
+                    ],
+                    "actual_output": "The word \"serendipity\" is a noun that means a combination of events which have come together by chance to make a surprisingly good or wonderful outcome. An example of usage is \"The serendipity of finding a $20 bill on the sidewalk.\" Synonyms for \"serendipity\" include \"chance\" and \"luck\".",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"serendipity\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm writing a poem and I need some inspiration. Could you find the definition, pronunciation, and examples of the word \"ephemeral\"? Also, I'd love to know its synonyms to enrich my poem.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"ephemeral\"}"
+                        }
+                    ],
+                    "actual_output": "The word \"ephemeral\" is a noun that means \"Something which lasts for a short period of time.\" Synonyms for \"ephemeral\" include \"evanescent\", \"fleeting\", \"momentary\", \"short\", \"short-lived\", \"temporary\", \"transitory\", and \"volatile\".",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api_v2_entries_en_word_get",
+                            "Action_Input": "{\"word\": \"ephemeral\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                }
+            ]
+        },
+        {
+            "service_name": "WolframAlpha",
+            "tests": [
+                {
+                    "input_prompt": "Can you find the current temperature in New York City in Fahrenheit using the weather API?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"current temperature in New York City in Fahrenheit\"}"
+                        }
+                    ],
+                    "actual_output": "The current temperature in New York City is 37 degrees Fahrenheit.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Current temperature in New York City in Fahrenheit\", \"units\": \"imperial\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query passed semantic similarity threshold of 0.87 with value: 1.0000001192092896. Strings compared: current temperature in New York City in Fahrenheit AND Current temperature in New York City in Fahrenheit"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "Please help me calculate the square root of 625 using the math API.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the square root of 625\"}"
+                        }
+                    ],
+                    "actual_output": "The square root of 625 is 25.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "math",
+                            "Action_Input": "{\"input\": \"625\", \"units\": \"metric\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"625\", \"units\": \"metric\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 1,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.6940181255340576"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I need to convert 5 miles to kilometers. Can you use the unit conversion API to help me with that?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"convert 5 miles to kilometers\"}"
+                        }
+                    ],
+                    "actual_output": "5 miles is equal to 8.066 kilometers.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"5\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.26265108585357666"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "Could you check the population of Tokyo for me using the demographics API?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the population of Tokyo\"}"
+                        }
+                    ],
+                    "actual_output": "The population of Tokyo is over 14 million residents.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Tokyo, Japan\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.6146426796913147"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I want to know the capital city of Australia. Can you use the geography API to find that out?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the capital city of Australia\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "'NoneType' object is not iterable"
+                },
+                {
+                    "input_prompt": "Hey, I'm trying to help my daughter with her homework and we're stuck on this math problem. Can you find out what the square root of 256 is?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the square root of 256\"}"
+                        }
+                    ],
+                    "actual_output": "The square root of 256 is 8.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"256\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.5984266996383667"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm working on a science project and I need to know how many moons Jupiter has. Can you look that up for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"how many moons Jupiter has\"}"
+                        }
+                    ],
+                    "actual_output": "Jupiter has 7 moons.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Jupiter has 7 moons.\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query passed semantic similarity threshold of 0.87 with value: 0.8739234209060669. Strings compared: how many moons Jupiter has AND Jupiter has 7 moons."
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Paris and I'm curious about the weather. Can you find out what the average temperature is in Paris in July?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"what the average temperature is in Paris in July\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` I need to use the Wolfram Alpha API to get the temperature in Paris in July.\nASSISTANT Action: Wolfram Alpha\nASSISTANT Action: Wolfram Alpha API.\nASSISTANT Action: Wolfram Alpha API.\nASSISTANT.\nASSISTANT.\nASSISTANT Action:`"
+                },
+                {
+                    "input_prompt": "I'm doing a presentation on famous scientists. Can you find out when Albert Einstein was born?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"when Albert Einstein was born\"}"
+                        }
+                    ],
+                    "actual_output": "Albert Einstein was born on March 14, 1879.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Albert Einstein\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.7411140203475952"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm trying to lose weight and I'm counting calories. Can you tell me how many calories are in a medium-sized apple?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"how many calories are in a medium-sized apple\"}"
+                        }
+                    ],
+                    "actual_output": "To answer your question, you need to provide the correct units of measurement for the query. Please provide the units of measurement and quantities (e.g. metric, imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial, \"imperial's.\nASSISTant, \"imperial's, \"imperial, \"imperial, \"imperial, \"imperial, \"imperian.\nassistant,",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"imperial\", \"timeout\": \"5\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The URL-encoded input for your query.\", \"units\": \"metric\", \"timeout\": \"5\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 10,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.040778741240501404"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm writing a report on the solar system and I need some information. Can you tell me the diameter of Mars and the distance between Mars and Earth?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the diameter of Mars\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the distance between Mars and Earth\"}"
+                        }
+                    ],
+                    "actual_output": "The diameter of Mars is about 6779 kilometers. The distance between Mars and Earth is about 228 million kilometers.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The diameter of Mars and the distance between Mars and Earth\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query passed semantic similarity threshold of 0.87 with value: 0.9015613198280334. Strings compared: the diameter of Mars AND The diameter of Mars and the distance between Mars and Earth"
+                    ],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm trying to eat healthier and I need to know the nutritional value of some foods. Can you tell me how many calories are in an apple and a banana?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"how many calories are in an apple\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"how many calories are in a banana\"}"
+                        }
+                    ],
+                    "actual_output": "The nutritionist.\nASSISTANT Action: The nutritionist.\nASSISTANT Action: The nutritionist.\nASSISTANT.\nASSISTANT Action: The nutrition.\nASSISTANT Action.\nASSISTANT Action.\nASSISTANT Action: The Action: The Action: The Action: The Action: The Action: The Action: The Action: The Action: The Action: The Action: The action: The action: The Action.\nASSISTANT Action.\nThe Action: The Action.\nASSISTANT Action: The Action: The Action: The Action. The Action. The Action. The action.\nThe action.\nThe, The answerable, The action.\nASSISTANT Action.\nASSISTANT Action.\nThe Action: The action. The action. The action.\nThe action.\nThe action.\nThe.\nThe action.\nASSISTANT answers.\nASSISTANT answers.\nASSISTANT.\nASSISTANT.\nThe action.\nASSISTANT The answer.\nASSISTANT Action.\nThe questions.\nThe.\nASSISTANT.\nThe",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"imperial\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"imperial\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"imperial\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"The nutritional value of an apple and a banana in metric units\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 8,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.5685000419616699"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a road trip and I need to calculate the distance. Can you tell me the distance from Los Angeles to New York by car? Also, can you tell me how long it would take to drive that distance?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"the distance from Los Angeles to New York by car\"}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{\"i\": \"how long it would take to drive from Los Angeles to New York by car\"}"
+                        }
+                    ],
+                    "actual_output": "The distance from Los Angeles to New York by car is about 3966 kilometers. It would take about 6.5 hours to drive this distance.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Los Angeles, CA to New York, NY\", \"units\": \"metric\", \"timeout\": 5}"
+                        },
+                        {
+                            "Action": "result_get",
+                            "Action_Input": "{ \"i\": \"Los Angeles, CA to New York, NY\", \"units\": \"metric\", \"timeout\": 5}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "WolframAlpha: Query failed semantic similarity threshold of 0.87 with value: 0.7619689106941223"
+                    ],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "Fruityvice",
+            "tests": [
+                {
+                    "input_prompt": "Can you find me information about a fruit called \"mango\" using the API? I want to know its nutritional values like carbohydrates, protein, fat, calories, and sugar.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"mango\"}"
+                        }
+                    ],
+                    "actual_output": "The mango is a fruit from the Anacardiaceae family, Sapindales order, and Mangifera genus. It contains 60 calories, 0.38g of fat, 13.7g of sugar, 15g of carbohydrates, and 0.82g of protein.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"mango\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Please fetch all the fruits available in the API. I want to explore the variety and learn about different fruit options.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getAllFruits",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "I have gathered all the fruits available in the API and can now explore the variety and learn about different fruit options. The fruits are: Persimmon, Strawberry, Banana, Tomato, Pear, Durian, Blackberry, Lingonberry, Kiwi, Lychee, Pineapple, Fig, Gooseberry, and GreenApple.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getAllFruits",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about fruits belonging to the \"Rosaceae\" family. Can you retrieve information about a fruit from this family using the API? I'd like to know its name, genus, order, and nutritional values.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByFamily",
+                            "Action_Input": "{\"family\": \"Rosaceae\"}"
+                        }
+                    ],
+                    "actual_output": "The API has provided me with the nutritional values of a variety of fruits from the Rosaceae family. The fruits include Persimmon, Strawberry, Banana, Tomato, Pear, Durian, Blackberry, Lingonberry, Kiwi, Lychee, and Pineapple. The nutritional values include calories, fat, sugar, carbohydrates, and protein.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByFamily",
+                            "Action_Input": "{\"family\": \"Rosaceae\"}"
+                        },
+                        {
+                            "Action": "getAllFruits",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm trying to find fruits that belong to the \"Citrus\" genus. Could you help me retrieve a list of all such fruits using the API? I'm interested in their names, families, and nutritional values.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByGenus",
+                            "Action_Input": "{\"genus\": \"Citrus\"}"
+                        }
+                    ],
+                    "actual_output": "The getFruitsByGenus tool has successfully retrieved a list of fruits belonging to the \"Citrus\" genus. The list includes the following fruits: Orange (Rutaceae, Sapindales, Citrus), Lemon (Rutaceae, Sapindales, Citrus), Tangerine (Rutaceae, Sapindales, Citrus), Lime (Rutaceae, Sapindales, Citrus), and Pomelo (Rutaceae, Sapindales, Citrus). The nutritional values of each fruit are as follows: Orange (calories: 43, fat: 0.2, sugar: 8.2, carbohydrates: 8.3, protein: 1.0), Lemon (calories: 29, fat: 0.3, sugar: 2.5, carbohydrates: 9.0, protein: 1.1), Tangerine (calories: 45, fat: 0.4, sugar: 9.1, carbohydrates: 8.3, protein: 0.0), Lime (calories: 25, fat: 0.1, sugar: 1.7, carbohydrates: 8.4, protein: 0.3), and Pomelo (calories: 37, fat: 0.0, sugar: 8.5, carbohydrates: 9.67, protein: 0.82).",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByGenus",
+                            "Action_Input": "{\"genus\": \"Citrus\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning to make a fruit salad, and I want to include fruits from the \"Sapindales\" order. Can you fetch a list of fruits belonging to this order using the API? I need their names, families, and nutritional values.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByOrder",
+                            "Action_Input": "{\"order\": \"Sapindales\"}"
+                        }
+                    ],
+                    "actual_output": "The getFruitsByOrder tool returned a list of 10 fruits from the Sapindales order, including their names, families, and nutritional values. The list includes Lychee (Sapindaceae), Orange (Rutaceae), Lemon (Rutaceae), Mango (Anacardiaceae), Tangerine (Rutaceae), Lime (Rutaceae), and Pomelo (Rutaceae). The nutritional values for each fruit are as follows: Lychee (calories: 66, fat: 0.44, sugar: 15.0, carbohydrates: 17.0, protein: 0.8), Orange (calories: 43, fat: 0.2, sugar: 8.2, carbohydrates: 8.3, protein: 1.0), Lemon (calories: 29, fat: 0.3, sugar: 2.5, carbohydrates: 9.0, protein: 1.1), Mango (calories: 60, fat: 0.38, sugar: 13.7, carbohydrates: 15.0, protein: 0.82), Tangerine (calories: 45, fat: 0.4, sugar: 9.1, carbohydrates: 8.3, protein: 0.0), Lime (calories: 25, fat: 0.1, sugar: 1.7, carbohydrates: 8.4, protein: 0.3), and Pomelo (calories: 37, fat: 0.0, sugar: 8.5, carbohydrates: 9.67, protein: 0.82).",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByOrder",
+                            "Action_Input": "{\"order\": \"Sapindales\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a themed dinner and want to serve fruits from the 'Rosales' order. Can you provide me with a list of fruits in this order?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByOrder",
+                            "Action_Input": "{\"order\": \"Rosales\"}"
+                        }
+                    ],
+                    "actual_output": "The following fruits are in the Rosales order: Persimmon, Strawberry, Pear, Blackberry, Fig, Plum, GreenApple, Raspberry, Blueberry, Apple, Apricot, and Jackfruit.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByOrder",
+                            "Action_Input": "{\"order\": \"Rosales\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm interested in learning more about the 'Citrus' genus. Can you provide me with a list of fruits that belong to this genus?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByGenus",
+                            "Action_Input": "{\"genus\": \"Citrus\"}"
+                        }
+                    ],
+                    "actual_output": "The Citrus genus contains the following fruits: Orange, Lemon, Tangerine, Lime, and Pomelo.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitsByGenus",
+                            "Action_Input": "{\"genus\": \"Citrus\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I've been told that fruits from the 'Solanaceae' family are not good for my health. Can you find out which fruits belong to this family so I can avoid them?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByFamily",
+                            "Action_Input": "{\"family\": \"Solanaceae\"}"
+                        }
+                    ],
+                    "actual_output": "Fruits from the Solanaceae family include tomatoes, peppers, and eggplants.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByFamily",
+                            "Action_Input": "{\"family\": \"Solanaceae\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about the nutritional value of an apple. Can you find out how many calories, carbohydrates, proteins, fats, and sugars an apple has?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"apple\"}"
+                        }
+                    ],
+                    "actual_output": "An apple has 52 calories, 0.4g of fat, 10.3g of sugar, 11.4g of carbohydrates, and 0.3g of protein.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"apple\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm trying to put together a fruit salad for a party this weekend. Can you help me find a list of fruits that are in season right now, and also tell me their nutritional values? I want to make sure I'm providing a healthy option for my guests.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"apple\"}"
+                        },
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"banana\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ` I have gathered the fruit.\nASSISTANT.\nASSISTANT.\nASSISTANT.\nASSISTANT,`"
+                },
+                {
+                    "input_prompt": "I'm curious about the origin of my favorite fruits. Could you find out where apples, oranges, and bananas originally come from? Also, I'd like to know their peak harvesting times.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"apple\"}"
+                        },
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"orange\"}"
+                        },
+                        {
+                            "Action": "getFruitByName",
+                            "Action_Input": "{\"name\": \"banana\"}"
+                        }
+                    ],
+                    "actual_output": "The origin and peak harvesting times for 10 fruits are as follows:\n\nApples: Origin: New Zealand, Peak Harvesting Times: September to October\nBananas: Origin: Uganda, Peak Harvesting Times: October to November\nCitrus: Origin: China, Peak Harvesting Times: October to November\nDurian: Origin: India, Peak Harvesting Times: October to November\nEbena: Origin: India, Peak harvesting times: November\nEbena: November 20",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getFruitByFamily",
+                            "Action_Input": "{\"family\": \"Apple\"}"
+                        },
+                        {
+                            "Action": "getFruitByGenus",
+                            "Action_Input": "{\"genus\": \"Malus\"}"
+                        },
+                        {
+                            "Action": "getAllFruits",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "Cataas",
+            "tests": [
+                {
+                    "input_prompt": "Hey, can you help me find a random cat picture? I need one with a width of 500 pixels and a height of 300 pixels. It would be great if you could return it in JSON format.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"width\": \"500\", \"height\": \"300\", \"json\": \"true\"}"
+                        }
+                    ],
+                    "actual_output": "The getRandomCat tool requires the type parameter to be one of the five available options: square, medium, small, xsmall, and cat. You can use the getRandomCat tool to find a random cat picture with a width of 5000 pixels and a height of 300 pixels. It would be great if you could return a random cat picture with a width of 5000 pixels. It would be great if you can use the getRandom cat picture with a width of 5000 pixels. It would be great, 5000",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"type\": \"cat\", \"width\": \"500\", \"height\": \"300\", \"html\": \"\", \"json\": \"\"}"
+                        },
+                        {
+                            "Action": "tags",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm looking for a cat picture with the tag 'cute'. Could you find me a random one? Make sure it has a width of 800 pixels and a height of 600 pixels.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatByTag",
+                            "Action_Input": "{\"tag\": \"cute\", \"width\": \"800\", \"height\": \"600\"}"
+                        }
+                    ],
+                    "actual_output": "I found a random cat image with the tag 'cute' and a width of 800 pixels and a height of 600 pixels. The image is saved in the file './images/0212071704.jpeg'.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatByTag",
+                            "Action_Input": "{\"tag\": \"cute\", \"type\": \"random\", \"width\": \"800\", \"height\": \"600\"}"
+                        },
+                        {
+                            "Action": "findCatByTag",
+                            "Action_Input": "{\"tag\": \"cute\", \"type\": \"square\", \"width\": \"800\", \"height\": \"600\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 1,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I want to surprise my friend with a cat picture that says 'Happy Birthday!' Can you find a random cat image with that text?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday!\"}"
+                        }
+                    ],
+                    "actual_output": "I found a random cat image with the text 'Happy Birthday!' The image is saved in the file '0212071719.jpeg' in the directory 'images'.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday!\", \"type\": \"random\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"type\": \"square\", \"text\": \"Happy Birthday!\", \"width\": \"100\", \"height\": \"100\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 1,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I need a list of all the available cat tags. Can you retrieve them for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "tags",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "The tags tool has returned a list of all the available cat tags, which includes: #christmascat, #scottishfold, 2cats, 4, @Beardlyness, B&W, BED, BEER, Belfast, BelfastMet, BigEar, BigEars, Black, BlackInWhite, Box, Buckley, Cat, Cat in a faucet, Catto, Chair, Christmas, CryptoWorld Cat, Curious, Cute, Dark, FAT, Female, Friends, Fulgencio, Going shopping?, Gray, GreenEyes, Grumpy, HandInHand, Hides, Hiding, KingCat, Lay, Long, Luz, Maine Coon, Mali, Maskcat, Mimi, My cat(Mamay(\u043c\u0430\u043c\u0430\u0439)) bebrik.xyz\", NSFW, NorthenCat, Norwegian, Norwegian Forest Cat, OnTheNotebook, Orange, Oriental, Outside, Peekaboo, Polyson, PopcornTrap, Quantico, Ragdoll, Relaxed, Rexplanation of the tags tool.\nASSISTANT Action: tags\nASSISTANT Action Input: {}",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "tags",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm curious about how many cats are available in the database. Can you count them for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "count",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "There are currently 1301 cats in the database.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "count",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I want to browse through a variety of cat pictures. Can you retrieve a list of 3 cats for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{}"
+                        },
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "actual_output": "Here is a list of 3 cats for you to browse: \n1. A orange cat licking its paw (image/jpeg, 59097 bytes)\n2. A shocked cat with its mouth open (image/png, 6636 bytes)\n3. A reaction cat with its mouth open (image/gif, 12418 bytes)",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "api",
+                            "Action_Input": "{\"limit\": 3, \"skip\": 0, \"tags\": \"\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm feeling a bit down and could use a pick-me-up. Could you find me a random picture of a cat? Make sure it's a cute one!",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"type\": \"cute\"}"
+                        }
+                    ],
+                    "actual_output": "The getRandomCat tool requires the type parameter to be one of the five available options: square, medium, small, xsmall, and cute.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"type\": \"cute\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "tags",
+                            "Action_Input": "{}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm working on a presentation about cats and need some visuals. Can you get me a picture of a cat that's exactly 500 pixels wide and 300 pixels high? I'd prefer it if the cat was a tabby.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"type\": \"tabby\", \"width\": \"500\", \"height\": \"300\"}"
+                        }
+                    ],
+                    "actual_output": "The getRandomCat tool requires the type parameter to be one of the five available options: square, medium, small, xsmall. Since you specified \"tabby\", the tool will return an error if the type parameter is not one of the five options.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "getRandomCat",
+                            "Action_Input": "{\"type\": \"tabby\", \"width\": \"500\", \"height\": \"300\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I need a funny image for a birthday card. Can you find me a picture of a cat with the text 'Happy Birthday' on it?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday!\"}"
+                        }
+                    ],
+                    "actual_output": "Here is a funny image of a cat with the text 'Happy Birthday' on it: https://example.com/images/0212071906.png",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"type\": \"square\", \"text\": \"Happy Birthday\", \"width\": \"100\", \"height\": \"100\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 1,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm planning a surprise party for my friend who loves cats. Could you help me design an invitation? I'd like a picture of a cat with a party hat, and the text \"You're invited to a purr-fect party!\" on it.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"party hat\"}"
+                        }
+                    ],
+                    "actual_output": "I'm sorry, but I'm not a cat expert. I can help you design an invitation. I'm not a cat, and the text \"You're planning a surprise party for your friend who loves cats. I need to help you design an invitation. I'd like a picture of a cat with a cat, and the text \"You're planning a purrant expert.\nASSISTANT Action: I'm",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"You're invited to a purr-fect party!\", \"type\": \"cat\", \"width\": \"100\", \"height\": \"100\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 6,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm starting a blog about my life as a cat owner. Could you provide me with a cat gif for my first post? I'd also like to add a caption saying \"Welcome to my cat-tastic journey!\".",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Welcome to my cat-tastic journey!\"}"
+                        }
+                    ],
+                    "actual_output": "Here is a cat gif with the caption \"Welcome to my cat-tastic journey!\" for your first post: https://example.com/images/0212072107.jpeg",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Welcome to my cat-tastic journey!\", \"type\": \"cat\", \"width\": \"220\", \"height\": \"220\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"type\": \"square\", \"text\": \"Welcome to my cat-tastic journey!\", \"width\": \"220\", \"height\": \"220\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 1,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm making a birthday card for my niece who loves kittens. Could you find a cute kitten picture for me? And could you add the text \"Happy Birthday!\" on it?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday!\", \"type\": \"cute\"}"
+                        }
+                    ],
+                    "actual_output": "I found 10 cute kitten pictures for you. Here is one of them: [image]. You can use the HTML code provided to add the text \"Happy Birthday!\" to the image.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "findCatById",
+                            "Action_Input": "{\"id\": \"12345\", \"type\": \"kitten\", \"width\": \"100\", \"height\": \"100\", \"html\": \"Happy Birthday!\", \"json\": \"true\"}"
+                        },
+                        {
+                            "Action": "findCatByTag",
+                            "Action_Input": "{\"tag\": \"birthday\", \"type\": \"kitten\", \"width\": \"100\", \"height\": \"100\", \"html\": \"Happy Birthday!\", \"json\": \"true\"}"
+                        },
+                        {
+                            "Action": "findCatWithText",
+                            "Action_Input": "{\"text\": \"Happy Birthday!\", \"type\": \"kitten\", \"width\": \"100\", \"height\": \"100\", \"html\": \"Happy Birthday!\", \"json\": \"true\"}"
+                        },
+                        {
+                            "Action": "api",
+                            "Action_Input": "{\"limit\": \"10\", \"skip\": \"0\", \"tags\": \"\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        },
+        {
+            "service_name": "CurrencyBeacon",
+            "tests": [
+                {
+                    "input_prompt": "Hey, can you help me find out the current exchange rate for USD to EUR using the currency API? I need to know how many Euros I'll get for 100 US dollars.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR\"}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate for USD to EUR is 0.92838657. This means that for every 100 US dollars, you will receive 92.84 Euros.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "Could you please fetch the historical exchange rate data for GBP to CAD on January 1, 2022, using the currency API? I want to analyze the currency fluctuations for that day.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "historical_get",
+                            "Action_Input": "{ \"base\": \"GBP\", \"date\": \"2022-01-01\", \"symbols\": \"CAD\"}"
+                        }
+                    ],
+                    "actual_output": "The exchange rate for GBP to CAD on January 1, 2022 was 1.70948212.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "historical_get",
+                            "Action_Input": "{ \"base\": \"GBP\", \"date\": \"2022-01-01\", \"symbols\": \"CAD\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Japan next month. Can you retrieve the exchange rate data for USD to JPY from October 1, 2021, to November 30, 2021, using the currency API? I want to compare the rates and estimate my expenses.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "timeseries_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"start_date\": \"2021-10-01\", \"end_date\": \"2021-11-30\", \"symbols\": \"JPY\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ``"
+                },
+                {
+                    "input_prompt": "I need to convert 500 Euros to US dollars. Can you use the currency API to convert the amount from EUR to USD for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"EUR\", \"to\": \"USD\", \"amount\": 500}"
+                        }
+                    ],
+                    "actual_output": "500 Euros is equal to 538.568755 US dollars.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"EUR\", \"to\": \"USD\", \"amount\": \"500\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "CurrencyBeacon: amount expected property converted to string"
+                    ],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I want to know the current exchange rates for USD, EUR, and GBP. Can you fetch the real-time rates for these currencies using the currency API?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": [\"EUR\", \"GBP\"]}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate for USD is 0.92838657, the current exchange rate for EUR is 0.92838657, and the current exchange rate for GBP is 0.79268469.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR,GBP\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "CurrencyBeacon: symbols expected property converted to string"
+                    ],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a vacation to Thailand next year. Can you fetch the exchange rate data for THB to USD from January 1, 2023, to December 31, 2023, using the currency API? I want to estimate my budget.",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "timeseries_get",
+                            "Action_Input": "{ \"base\": \"THB\", \"start_date\": \"2023-01-01\", \"end_date\": \"2023-12-31\", \"symbols\": \"USD\"}"
+                        }
+                    ],
+                    "errored": true,
+                    "error_type": "parsing",
+                    "error_message": "Could not parse LLM output: ``"
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Japan next month. Could you find out how much 1000 US dollars would be in Japanese yen using the current exchange rate?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"USD\", \"to\": \"JPY\", \"amount\": 1000}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate for 1000 US dollars to Japanese yen is 148968.95107.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"USD\", \"to\": \"JPY\", \"amount\": \"1000\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "CurrencyBeacon: amount expected property converted to string"
+                    ],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I need to send some money to my friend in France. Can you tell me how much 200 US dollars would convert to in Euros?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"USD\", \"to\": \"EUR\", \"amount\": 200}"
+                        }
+                    ],
+                    "actual_output": "200 US dollars would convert to 185.677314 Euros.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "convert_get",
+                            "Action_Input": "{ \"from\": \"USD\", \"to\": \"EUR\", \"amount\": \"200\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "CurrencyBeacon: amount expected property converted to string"
+                    ],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm a forex trader and I need to know the current exchange rates for the US dollar against the Euro, British pound, and Japanese yen. Can you get this information for me?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": [\"EUR\", \"GBP\", \"JPY\"]}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate for the US dollar against the Euro is 0.92838657, against the British pound is 0.79268469, and against the Japanese yen is 148.96895107.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR,GBP,JPY\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [
+                        "CurrencyBeacon: symbols expected property converted to string"
+                    ],
+                    "slot_filling_passed": true,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": true
+                },
+                {
+                    "input_prompt": "I'm planning a trip to Japan next month, and I want to start budgeting. Can you tell me the current exchange rate from US dollars to Japanese yen, and also provide the average exchange rate for July?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"JPY\"}"
+                        },
+                        {
+                            "Action": "timeseries_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"start_date\": \"2023-07-01\", \"end_date\": \"2023-07-31\", \"symbols\": \"JPY\"}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate from US dollars to Japanese yen is 148.96895107. The average exchange rate for July is 148.96895107.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"JPY\"}"
+                        },
+                        {
+                            "Action": "historical_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"date\": \"2024-07-01\", \"symbols\": \"JPY\"}"
+                        }
+                    ],
+                    "planner_passed": false,
+                    "error_type": "slot_filling",
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                },
+                {
+                    "input_prompt": "I'm a business owner and I need to invoice a client in Europe. Can you provide me with the current exchange rate from US dollars to Euros, and also the average rate for the July so I can set a fair price?",
+                    "expected_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR\"}"
+                        },
+                        {
+                            "Action": "timeseries_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"start_date\": \"2023-07-01\", \"end_date\": \"2023-07-31\", \"symbols\": \"EUR\"}"
+                        }
+                    ],
+                    "actual_output": "The current exchange rate from US dollars to Euros is 0.92838657. The average rate for July is 0.92838657.",
+                    "actual_plan_and_inputs": [
+                        {
+                            "Action": "latest_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"symbols\": \"EUR\"}"
+                        },
+                        {
+                            "Action": "timeseries_get",
+                            "Action_Input": "{ \"base\": \"USD\", \"start_date\": \"2024-07-01\", \"end_date\": \"2024-07-31\", \"symbols\": \"EUR\"}"
+                        }
+                    ],
+                    "planner_passed": true,
+                    "additional_planner_steps": 0,
+                    "slot_filling_evaluation_details": [],
+                    "slot_filling_passed": false,
+                    "error_type": "slot_filling",
+                    "human_eval": "",
+                    "planner_and_slot_filling_passed": false
+                }
+            ]
+        }
+    ]
+}

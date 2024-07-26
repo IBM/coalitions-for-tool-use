@@ -1,0 +1,499 @@
+{
+    "testcases": [
+        {
+            "api": "get_experiment_list",
+            "api_cases": [
+                {
+                    "input": "What experiments can you run?",
+                    "expected_output": ["metadata.package.name"]
+                },
+                {
+                    "input": "What experiments are there in the virtual registry?",
+                    "expected_output": ["metadata.package.name"]
+                },
+                {
+                    "input": "What chemistry experiments can you start?",
+                    "expected_output": ["metadata.package.name"]
+                },
+                {
+                    "input": "Can you tell me what experiments are available and the licenses they use?",
+                    "expected_output": ["metadata.package.name", "metadata.package.license"]
+                },
+                {
+                    "input": "Can you tell me what experiments are available and the platforms they run on?",
+                    "expected_output": ["metadata.package.name", "metadata.registry.platforms"]
+                },
+                {
+                    "input": "Can you tell me what experiments are available and their maintainers are?",
+                    "expected_output": ["metadata.package.maintainer", "metadata.package.name"]
+                },
+                {
+                    "input": "Can you tell me what experiments are available and what images they use?",
+                    "expected_output": ["metadata.package.name","metadata.registry.containerImages"]
+                },
+                {
+                    "input": "Can you tell me what platforms i need to have access to, to run all the experiments?",
+                    "expected_output": ["metadata.registry.platforms","parameterisation.presets.platform"]
+                },
+                {
+                    "input": "Can you tell me if there are any problems with any of the experiments?",
+                    "expected_output": ["problems"]
+                },
+                {
+                    "input": "Can you tell me how many times each experiment has been run?",
+                    "expected_output": ["metadata.package.name", "metadata.registry.timesExecuted"]
+                }
+            ]
+        },
+        {
+            "api": "get_experiment",
+            "api_cases": [
+                {
+                    "input": "Tell me about the nanopore geometry experiment",
+                    "expected_output": ["entry.metadata.package.description"]
+                },
+                {
+                    "input": "Who is the maintainer of the nanopore geometry experiment",
+                    "expected_output": ["entry.metadata.package.maintainer"]
+                },
+                {
+                    "input": "What tags does the nanopore geometry experiment have?",
+                    "expected_output": ["entry.metadata.package.tags"]
+                },
+                {
+                    "input": "Tell me who owns the nanopore geometry experiment and the license",
+                    "expected_output": ["entry.metadata.package.maintainer", "entry.metadata.package.license"]
+                },
+                {
+                    "input": "When was the nanopore geometry experiment created and what images does it use?",
+                    "expected_output": ["entry.metadata.registry.createdOn", "entry.metadata.registry.containerImages"]
+                },
+                {
+                    "input": "What are the inputs for the nanopore geometry experiment",
+                    "expected_output": ["entry.metadata.registry.inputs"]
+                },
+                {
+                    "input": "What is the name of input file used for the nanopore geometry experiment",
+                    "expected_output": ["entry.metadata.registry.inputs"]
+                },
+                {
+                    "input": "Tell me the variables i can set for the nanopore geometry experiment",
+                    "expected_output": ["entry.parameterisation.executionOptions.variables"]
+                },
+                {
+                    "input": "what are the properties that the nanopore geometry measures?",
+                    "expected_output": ["entry.metadata.registry.interface.propertiesSpec"]
+                }
+            ]
+        },
+        {
+            "api": "get_instance_experiment_list",
+            "api_cases": [
+                {
+                    "input": "What is the status of all the experiment instances?",
+                    "expected_output": ["status.stage-state"]
+                },
+                {
+                    "input": "What stage are the experiment instances on?",
+                    "expected_output": ["status.current-stage"]
+                },
+                {
+                    "input": "What are the experiments instances that available?",
+                    "expected_output": ["id"]
+                },
+                {
+                    "input": "Get me all the instance ids. ",
+                    "expected_output": ["id"]
+                },
+                {
+                    "input": "Get me information on the package used for this experiment instance. ",
+                    "expected_output": ["experiment.base.packages"]
+                },
+                {
+                    "input": "Tell me how many times each experiment has been run",
+                    "expected_output": ["experiment.metadata.registry.timesExecuted"]
+                },
+                {
+                    "input": "Tell me the name of each experiment and how many times it has been run.",
+                    "expected_output": ["experiment.metadata.registry.timesExecuted", "experiment.metadata.package.name"]
+                },
+                {
+                    "input": "Give me the list of images used for the each for the experiments instances.",
+                    "expected_output": ["experiment.metadata.registry.containerImages"]
+                }
+
+            ]
+        },
+        {
+            "api": "get_instance_status",
+            "api_cases": [
+                {
+                    "input": "What is the status of experiment instance - excitation-energy-dft-gamess-us-5dd400-343aucgl?",
+                    "expected_output": ["experiment-state", "exit-status"]
+                },
+                {
+                    "input": "Why did instance excitation-energy-dft-gamess-us-5dd400-343aucgl fail?",
+                    "expected_output": ["error-description"]
+                },
+                {
+                    "input": "Why did instance excitation-energy-dft-gamess-us-5dd400-343aucgl error?",
+                    "expected_output": ["error-description"]
+                },
+                {
+                    "input": "what went wrong with experiment excitation-energy-dft-gamess-us-5dd400-343aucgl",
+                    "expected_output": ["error-description"]
+                },
+                {
+                    "input": "what input file was used for experiment excitation-energy-dft-gamess-us-5dd400-343aucgl?",
+                    "expected_output": ["meta.inputs"]
+                },
+                {
+                    "input": "what was the name of the experiment used in instance excitation-energy-dft-gamess-us-5dd400-343aucgl?",
+                    "expected_output": ["meta.userMetadata.st4sd-package-name"]
+                },
+                {
+                    "input": "what experiment was used in instance excitation-energy-dft-gamess-us-5dd400-343aucgl?",
+                    "expected_output": ["meta.userMetadata.st4sd-package-name"]
+                },
+                {
+                    "input": "what were the different stages in experiment instance excitation-energy-dft-gamess-us-5dd400-343aucgl?",
+                    "expected_output": ["meta.variables.stage.0.stage-name", "meta.variables.stage.1.stage-name", "meta.variables.stage.2.stage-name"]
+                }
+            ]
+        },
+        {
+            "api": "nager_public_holidays_worldwide",
+            "api_cases": [
+                {
+                    "input": "What are the dates of the public holidays worldwide",
+                    "expected_output": ["date"]
+                },
+                {
+                    "input": "What are the names of all of the public holidays worldwide",
+                    "expected_output": ["localName", "name"]
+                },
+                {
+                    "input": "Tell me the names of the public holidays worldwide which are known by a different name locally in that country.",
+                    "expected_output": ["localName", "name"]
+                },
+                {
+                    "input": "Tell me the names of the public holidays worldwide are celebrated globally.",
+                    "expected_output": ["name", "global"]
+                },
+                {
+                    "input": "What years were all the worldwide public holidays started?",
+                    "expected_output": ["launchYear"]
+                },
+                {
+                    "input": "What types of public holidays are there worldwide?",
+                    "expected_output": ["types"]
+                }
+            ]
+        },
+        {
+            "api": "dictionaryapi",
+            "api_cases": [
+                {
+                    "input": "Tell me the definiton of good.",
+                    "expected_output": ["meanings"]
+                },
+                {
+                    "input": "What does good mean",
+                    "expected_output": ["meanings"]
+                },
+                {
+                    "input": "Tell me some synonyms of good",
+                    "expected_output": ["meanings"]
+                },
+                {
+                    "input": "Get me the web address for getting the defintion of the word good",
+                    "expected_output": ["sourceUrls"]
+                },
+                {
+                    "input": "What is the phonetic representation of the word good?",
+                    "expected_output": ["phonetic", "phonetics"]
+                }
+            ]
+        },
+        {
+            "api": "fruityvice",
+            "api_cases": [
+                {
+                    "input": "Get me all the fruits",
+                    "expected_output": ["name"]
+                },
+                {
+                    "input": "Get me all available families of fruits",
+                    "expected_output": ["family"]
+                },
+                {
+                    "input": "What families of fruits are there?",
+                    "expected_output": ["family"]
+                },
+                {
+                    "input": "What genus is apple?",
+                    "expected_output": ["genus"]
+                },
+                {
+                    "input": "Give me all nutritional information on an apple",
+                    "expected_output": ["nutritions.calories", "nutritions.fat", "nutritions.sugar","nutritions.carbohydrates","nutritions.protein"]
+                },
+                {
+                    "input": "I want to know the nutritional values of a mango",
+                    "expected_output": ["nutritions.calories", "nutritions.fat", "nutritions.sugar","nutritions.carbohydrates","nutritions.protein"]
+                },
+                {
+                    "input": "Tell me about the protein and calories in an apple",
+                    "expected_output": [ "nutritions.fat","nutritions.protein"]
+                },
+                {
+                    "input": "Give me information on the sugars in an apple",
+                    "expected_output": ["nutritions.sugar"]
+                },
+                {
+                    "input": "Get me the ids and names of all available fruits",
+                    "expected_output": ["id","name"]
+                },
+                {
+                    "input": "Get me the ids, names and family of all available fruits",
+                    "expected_output": ["id", "name", "family"]
+                }
+            ]
+        },
+        {
+            "api": "nflapi",
+            "api_cases": [
+                {
+                    "input": "What teams are playing this week?",
+                    "expected_output": ["home", "away"]
+                },
+                {
+                    "input": "What times are the games this week?",
+                    "expected_output": ["gameTime"]
+                },
+                {
+                    "input": "Where can I watch the games?",
+                    "expected_output": ["epsnLink", "cbsLink"]
+                },
+                {
+                    "input": "What are the status of each game?",
+                    "expected_output": ["gameStatus"]
+                },
+                {
+                    "input": "What is happening in all of the games right now?",
+                    "expected_output": ["gameStatus"]
+                },
+                {
+                    "input": "Give me an update on all the games taking place this week",
+                    "expected_output": ["gameStatus"]
+                },
+                {
+                    "input": "What are the ids of all the teams playing this week?",
+                    "expected_output": [ "teamIDHome", "teamIDAway"]
+                }
+            ]
+        },
+        {
+            "api": "fishapi",
+            "api_cases": [
+                {
+                    "input": "What are the availables fishes?",
+                    "expected_output": ["name"]
+                },
+                {
+                    "input": "Tell me the species of all available fishes",
+                    "expected_output": ["meta.scientific_classification.species", "meta.species"]
+                },
+                {
+                    "input": "Tell me the name and status of each fish",
+                    "expected_output": ["name", "meta.conservation_status"]
+                },
+                {
+                    "input": "What is the name and status of each fish",
+                    "expected_output": ["name", "meta.conservation_status"]
+                },
+                {
+                    "input": "Give me the names of all the fishes and alternative names they are known by",
+                    "expected_output": ["name",  "meta.synonyms"]
+                },
+                {
+                    "input": "For each fish tell me what it is called, the kingdom and the family it belongs to",
+                    "expected_output": ["name", "meta.scientific_classification.kingdom", "meta.scientific_classification.family"]
+                },
+                {
+                    "input": "Give me details on the family of each fish",
+                    "expected_output": ["meta.scientific_classification.family", "meta.scientific_classification.superfamily", "meta.scientific_classification.subfamily"]
+                }
+            ]
+        },
+        {
+            "api": "zillowapi",
+            "api_cases": [
+                {
+                    "input": "Why is this property being sold?",
+                    "expected_output": ["agent_reason"]
+                },
+                {
+                    "input": "How long has this property been on the market?",
+                    "expected_output": ["timeOnZillow"]
+                },
+                {
+                    "input": "What is the address of property X",
+                    "expected_output": ["zipcode", "streetAddress", "city"]
+                },
+                {
+                    "input": "What is the full address of property X",
+                    "expected_output": ["zipcode", "streetAddress", "city", "country", "county", "state"]
+                },
+                {
+                    "input": "What is the name and status of each fish",
+                    "expected_output": ["name", "meta.conservation_status"]
+                },
+                {
+                    "input": "Does this property use solar panels?",
+                    "expected_output": ["solarPotential"]
+                },
+                {
+                    "input": "What is the rental potential of this property?",
+                    "expected_output": ["rentZestimate"]
+                },
+                {
+                    "input": "Give me details on the brokerage firm of this property",
+                    "expected_output": ["brokerId", "brokerageName"]
+                },
+                {
+                    "input": "Give me tax details on this property",
+                    "expected_output": ["taxHistory", "propertyTaxRate"]
+                },
+                {
+                    "input": "What do you predict to be the monthly cost of living in this property",
+                    "expected_output": ["livingAreaValue", "monthlyHoaFee", "mortgageRates"]
+                },
+                {
+                    "input": "Give me some details about this property",
+                    "expected_output": ["homeFacts"]
+                }
+            ]
+        },
+        {
+            "api": "spotifyapi",
+            "api_cases": [
+                {
+                    "input": "What are the 5 most popular albums?",
+                    "expected_output": ["name", "popularity"]
+                },
+                {
+                    "input": "Give me all the songs that were released yesterday",
+                    "expected_output": ["name", "release_date"]
+                },
+                {
+                    "input": "Give me the names of all the songs that were released yesterday",
+                    "expected_output": ["name", "release_date"]
+                },
+                {
+                    "input": "Who are the most popular artists at the moment?",
+                    "expected_output": ["artists", "popularity"]
+                },
+                {
+                    "input": "Give me the links to the 5 most popular songs today",
+                    "expected_output": ["popularity", "release_date", "external_urls.spotify"]
+                },
+                {
+                    "input": "How many songs are there on album X",
+                    "expected_output": ["total_tracks"]
+                },
+                {
+                    "input": "Give me the names of all the songs and artists that have been signed and released by label X",
+                    "expected_output": ["name", "artists", "label"]
+                }
+            ]
+        },
+        {
+            "api": "newsapi",
+            "api_cases": [
+                {
+                    "input": "What are the latest news headlines?",
+                    "expected_output": ["title", "published_datetime_utc"]
+                },
+                {
+                    "input": "Provide me a link to the latest news articles",
+                    "expected_output": ["link", "source_url"]
+                }
+            ]
+        },
+        {
+            "api": "usaapi",
+            "api_cases": [
+                {
+                    "input": "What are the different states in the US?",
+                    "expected_output": ["name"]
+                },
+                {
+                    "input": "When were the different states established in the US?",
+                    "expected_output": ["name", "date"]
+                },
+                {
+                    "input": "Which of the US states are the most densely populated",
+                    "expected_output": ["population", "density_mi", "density_km", "name"]
+                },
+                {
+                    "input": "What US states are the most densely populated",
+                    "expected_output": ["population", "density_mi", "density_km", "name"]
+                },
+                {
+                    "input": "What are the names of US states which are the most densely populated",
+                    "expected_output": ["population", "density_mi", "density_km", "name"]
+                },
+                {
+                    "input": "What are the capitals of the different US Sates",
+                    "expected_output": ["capital", "name"]
+                },
+                {
+                    "input": "What US states are the largest with respect to land mass",
+                    "expected_output": ["area_mi", "density_mi", "density_km", "area_km", "name"]
+                },
+                {
+                    "input": "Tell me all the US states and their short form names",
+                    "expected_output": ["abbreviation", "name"]
+                }
+            ]
+        },
+        {
+            "api": "netflixapi",
+            "api_cases": [
+                {
+                    "input": "Get me all the movies in my watchlist",
+                    "expected_output": ["inRemindMeList", "queue.inQueue"]
+                },
+                {
+                    "input": "Play the trailer for X",
+                    "expected_output": ["jawSummary.trackIds.trackId_jawTrailer"]
+                },
+                {
+                    "input": "Give me the summaries of the 5 most popular shows",
+                    "expected_output": ["jawSummary.synopsis"]
+                },
+                {
+                    "input": "Is this film suitable for a 12 year old?",
+                    "expected_output": ["jawSummary.maturity.rating.ratingId", "jawSummary.maturity.rating.reasons"]
+                },
+                {
+                    "input": "Who were the actors in this film?",
+                    "expected_output": ["jawSummary.cast"]
+                },
+                {
+                    "input": "When did this film come out?",
+                    "expected_output": ["jawSummary.releaseYear"]
+                },
+                {
+                    "input": "Have I seen this film already?",
+                    "expected_output": ["jawSummary.watched"]
+                },
+                {
+                    "input": "When can I watch this film on netflix?",
+                    "expected_output": ["jawSummary.availability.availabilityDate"]
+                }
+            ]
+        }
+    ]
+}
