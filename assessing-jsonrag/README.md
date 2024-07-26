@@ -2,8 +2,6 @@
 
 This research was performed by IBM Research UK and investigates if coalitions of open-sourced, pretrained (non-fine-tuned) Large Language Models, can work together to assist in complex workflows through agentic augmentation with external tools. 
 
-In this directory we share our assessment strategy for examining which pre-trained model performs the best at critiquing plans for use within our coalition system.
-
 For assessing a systems ability to operate in the tool use domain it has to excel in the following sub-tasks:
 1. (Planning) Given an intent/prompt, plan the tools to use (LLM driven)
 1. (Slot filling/Execution) Slot fill the parameters for the tools to be used (LLM driven)

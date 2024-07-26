@@ -25,8 +25,11 @@ The assessment of this coalition was performed using the ToolAlpaca [test data s
 - An accompanying dataset was used by the ToolAlpaca team to fine-tune the [Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/) models, giving way to a direct comparison of fine-tuned models for tool use versus the coalition of non-fine-tuned models approach.
 
 This repo contains:
+This repo contains:
 1. Assessment of the coalition against the finetuned ToolAlpaca 7B and 13B models. See [assessing-fine-tuned-models](./assessing-fine-tuned-models/).
 1. Assessment of the coalition against single, un-fine-tuned models. See [assessing-single-models](./assessing-single-models/).
+1. Assessment of which LLMs are the best at critiquing for improving plans. See [assessing-critiquing](./assessing-critiquing/).
+1. Assessment of which LLMs are the best at tool response filtering. See [assessing-jsonrag](./assessing-jsonrag/).
 
 For each assessment, the collected datasets and evaluation scripts are provided. 
 
